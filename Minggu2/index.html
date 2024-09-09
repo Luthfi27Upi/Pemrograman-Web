@@ -3,50 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Position CSS</title>
-    <link rel="stylesheet" type="text/css" href="stylePosition.css">
+    <title>CSS Layouting</title>
+    <style>
+        a{
+            background-color: pink;
+        }
+        main{
+            width: 600px;
+            background-color: lightgreen;
+        }
+        main h2{
+            background-color: pink;
+        }
+        img{
+            width: 20%;
+        }
+    </style>
 </head>
 <body>
-    <h2>Position Static</h2>
+    <div class="header">
+        <h1>Selamat Datang di Website Kami</h1>
+    </div>
 
-    <p>Position Static digunakan untuk mengatur element menjadi statis secara default.
-        Elemen akan mengikuti posisi normal secara default,
-        element tidak dipengaruhi oleh properti seperti top, bottom, left, dan right.
+    <div class="navigasi">
+    <h2>Daftar Link</h2>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+    </div>
+
+    <div class="main">
+    <h2>Teknik Informatika</h2>
+    <img src="Gambar/hiii.png">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis esse perspiciatis, eos facilis ullam sequi id. Excepturi veniam illo laudantium, est accusamus inventore temporibus hic nam blanditiis atque minima magni?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quisquam animi ratione itaque, labore, in maxime assumenda delectus iure neque, est consectetur. Molestias temporibus eligendi, quia aperiam aliquid officia! Fugit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi ipsum, illum fuga fugiat obcaecati. Quidem eos quod deleniti voluptate expedita nobis praesentium tempora. Odit repellendus alias ullam perspiciatis tenetur!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus et error placeat obcaecati nisi voluptatum voluptates quibusdam fugiat temporibus praesentium! Distinctio, deleniti voluptas ullam nobis vero excepturi ipsum quidem assumenda!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus iusto animi illum perferendis quo dignissimos deleniti explicabo quis quia provident laboriosam, cumque velit porro praesentium blanditiis iste molestias accusamus. Porro?
     </p>
-    <div class="static">
-        Element ini diatur menggunakan posisi static;
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quam officia nostrum eius, nihil, molestiae aut officiis libero recusandae explicabo, veritatis tempora. Eos non fugit quod. Sapiente sunt at dicta.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore aut reiciendis voluptatibus id laudantium molestias atque culpa corrupti at quas, vel vitae fugiat doloremque molestiae? Neque quisquam nesciunt quidem error.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex eveniet molestiae provident quam? Totam ex dolores sunt accusamus fuga quos, illum culpa mollitia eos labore veniam officiis, deleniti nam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi incidunt error sequi, veritatis deserunt quisquam illum at. Dolorem, voluptatibus, explicabo ipsum dolorum nihil odit eaque animi corporis natus voluptas harum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, aut non? Illo itaque quia eveniet modi ab esse minima reprehenderit excepturi aliquam, nesciunt, pariatur tempore. Nobis obcaecati illum voluptates explicabo.
+    </p>
     </div>
-    <br><br>
-    <h2>position: relative;</h2>
-    <p>Position relative digunakan untuk mengatur element menjadi relatif terhadap posisi</p>
-    <div class="relative">
-        Element ini diatur menggunakan posisi relative;
-    </div>
-    <br><br>
-    <h2>position: fixed;</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id fugiat consequuntur ducimus laboriosam officiis earum, cum impedit, aperiam sequi harum sunt! Ipsum necessitatibus corrupti veritatis eos excepturi est, eaque voluptatem?</p>
-    <div class="fixed">
-        element ini diatur menggunakan posisi fixed;
-    </div>
-    <br><br>
-    <h2>position: absolute;</h2>
-    <p>Position absolute digunakan untuk mengatur element menjadi absolut terhadap posisi parent</p>
-    <div class="relative1">element posisi relative;
-    <div class="absolute">
-        Element ini diatur menggunakan posisi absolute;</div>
-    </div>
-    <br><br>
-    <h2>position: sticky;</h2>
-    <p>cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi sticky bekerja</p>
-    <p>Position sticky digunakan untuk mengatur element menjadi sticky terhadap posisi parent</p>
-    <div class="sticky">
-        hi i'm sticky
-    </div>
-    <div style="padding-bottom: 2000px;">
-        <p>elemen sticky menempel pada posisi paling atas halaman(top:0),
-            ketika mencapai posisi scrollnya</p>
-        <p>cobalah untuk melakukan scroll</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eaque accusantium fuga quos dolorem, at laborum sunt quo magnam eum fugiat ipsa atque quasi vitae corporis unde illum explicabo optio.</p>
+
+    <div class="copyright">
+    <p class="copyright">copyright 2020. desain JTI Polinema</p>
     </div>
 </body>
 </html>
