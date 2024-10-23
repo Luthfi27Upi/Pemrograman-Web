@@ -1,16 +1,12 @@
 <?php
 session_start();
 
-// Inisialisasi variabel error
 $usernameError = $passwordError = "";
 
-// Mengecek apakah form sudah di-submit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Mendapatkan nilai username dan password dari form
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Validasi input username dan password
     if (empty($username)) {
         $usernameError = "Harus terisi";
     }
@@ -21,15 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (!preg_match("/\d/", $password)) {
         $passwordError = "Password harus terdiri dari huruf dan angka";
     } else {
-        // Jika username dan password benar
         if ($username === "admin" && $password === "admin123") {
-            // Simpan username dalam session
             $_SESSION['username'] = $username;
-            // Redirect ke halaman home.php
             header("Location: home.php");
             exit();
         } else {
-            // Jika username atau password salah
             $passwordError = "Username atau password salah";
         }
     }
@@ -51,12 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<!-- Header -->
 <header>
     <h1>UTS Hotel</h1>
 </header>
 
-<!-- Login Form -->
 <div class="login-container">
     <div class="login-image"></div>
     <div class="login-form">

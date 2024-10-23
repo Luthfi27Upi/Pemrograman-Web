@@ -3,12 +3,11 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Membuat body memenuhi viewport */
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* Memposisikan secara horizontal */
-    align-items: center; /* Memposisikan secara vertikal */
+    justify-content: center;
+    align-items: center; 
 }
-
 header {
     width: 100%;
     background-color: #333;
@@ -22,28 +21,24 @@ header {
     left: 0;
     z-index: 1000;
 }
-
 header h1 {
     margin-left: 20px;
 }
-
 .login-container {
     display: flex;
-    max-width: 800px; /* Ukuran maksimal container */
-    width: 100%; /* Sesuaikan dengan layar perangkat */
+    max-width: 800px;
+    width: 100%; 
     background-color: white;
-    margin: auto; /* Membuat login container berada di tengah */
+    margin: auto; 
     border-radius: 8px;
     overflow: hidden;
 }
-
 .login-image {
     width: 50%;
     background-image: url('Gambar/LoginH.jpg'); 
     background-size: cover;
     background-position: center;
 }
-
 .login-form {
     width: 50%;
     padding: 40px;
@@ -51,7 +46,6 @@ header h1 {
     flex-direction: column;
     justify-content: center;
 }
-
 h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -59,7 +53,6 @@ h2 {
     font-weight: normal;
     color: #333;
 }
-
 input {
     width: 100%;
     padding: 12px;
@@ -67,7 +60,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 button {
     width: 100%;
     padding: 12px;
@@ -78,7 +70,6 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
-
 button:hover {
     background-color: #555;
 }
@@ -87,4 +78,3 @@ button:hover {
     color: red;
     font-size: 12px;
 }
-

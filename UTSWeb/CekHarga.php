@@ -1,43 +1,31 @@
 <?php
 session_start();
 
-// Inisialisasi variabel
 $lantai = $type = $jumlahHari = $diskon = "";
 $totalTransaksi = $totalDiskon = $totalBayar = 0;
 $typeError = $diskonError = "";
 
-// Harga per tipe kamar
 $hargaTipeKamar = [
     "standard" => 300000,
     "superior" => 400000,
     "deluxe" => 500000
 ];
-
-// Proses perhitungan ketika form di-submit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lantai = $_POST['lantai'];
     $type = $_POST['type'];
     $jumlahHari = $_POST['jumlahHari'];
     $diskon = $_POST['diskon'];
-
-    // Validasi input
     if (empty($type)) {
         $typeError = "Tipe kamar harus dipilih";
     }
     if (empty($diskon)) {
         $diskonError = "Diskon harus dipilih";
     }
-
-    // Hitung harga sewa berdasarkan tipe kamar dan jumlah hari
     if (!empty($type) && isset($hargaTipeKamar[$type])) {
         $hargaSewa = $hargaTipeKamar[$type] * $jumlahHari;
-
-        // Tambahan biaya jika lantai lebih dari 5
         if ($lantai > 5) {
             $hargaSewa += 50000;
         }
-
-        // Hitung diskon
         if ($diskon == "Member") {
             $totalDiskon = 0.1 * $hargaSewa;
         } elseif ($diskon == "Promo HUT") {
@@ -45,8 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $totalDiskon = 0;
         }
-
-        // Total transaksi dan total yang harus dibayar
         $totalTransaksi = $hargaSewa;
         $totalBayar = $hargaSewa - $totalDiskon;
     }
@@ -63,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Cek Harga</title>
 </head>
 <body>
-
 <header>
     <h1>UTS Hotel</h1>
     <nav>
@@ -74,15 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </ul>
     </nav>
 </header>
-
-<!-- Form Cek Harga -->
 <div class="login-container">
     <div class="login-form">
         <h2>Cek Harga</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="lantai">Lantai:</label>
             <input type="number" id="lantai" name="lantai" value="<?php echo $lantai; ?>" required>
-
             <label for="type">Type:</label>
             <select id="type" name="type">
                 <option value="">Pilih Tipe</option>
@@ -107,7 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">CHECK</button>
         </form>
 
-        <!-- Hasil Perhitungan -->
         <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($type) && !empty($diskon)): ?>
         <div class="result">
             <p>Total transaksi adalah Rp <?php echo number_format($totalTransaksi, 0, ',', '.'); ?></p>
@@ -117,11 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php endif; ?>
     </div>
 </div>
-<!-- Footer -->
 <footer>
         <h3>Luthfi Triaswangga</h3>        
         <p>&copy; 2341720208 - TI 2E / 18</p>
 </footer>
-
 </body>
 </html>

@@ -43,8 +43,6 @@
         <img id="sliderImage3" src="Gambar/Slide3.jpg" alt="Slider Image 3">
         <div class="slidertitle" id="title3">Gambar 3</div>
     </div>
-
-     <!-- Profile Section -->
      <section class="profile-section">
         <div class="profile-container">
             <h2 class="profile-title">Selamat Datang di UTS Hotel</h2>
@@ -59,8 +57,6 @@
             </p>
         </div>
     </section>
-
-    <!-- Footer Section -->
     <footer>
             <h3>Luthfi Triaswangga</h3>
             <p>&copy; 2341720208 - TI 2E / 18</p>
