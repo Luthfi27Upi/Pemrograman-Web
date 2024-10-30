@@ -3,25 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Home.css">
-    <link href="bootstrap/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="home.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Home</title>
-    <script>
-    var i = 0;
-    $(document).ready(function() {
-      $("#sliderImage" + i).hide();
-      showNextImage();
-      setInterval(showNextImage, 3000);
-    });
-
-    function showNextImage() {
-      $("#sliderImage" + i).appendTo('#slider').fadeIn(1000).delay(1000).fadeOut(1000);
-      i++;
-      if (i == 3) i = 0;
-      $("#sliderTitle" + i).appendTo('#slider').fadeIn(1000).delay(1000).fadeOut(1000);
-    }
-  </script>
 </head>
 <header>
     <h1>UTS Hotel</h1>
@@ -34,15 +19,28 @@
     </nav>
 </header>
 <body>
-    <!-- Slider Section -->
-    <div id="slider">
-        <img id="sliderImage1" src="Gambar/Slide1.jpg" alt="Slider Image 1">
-        <div class="slidertitle" id="title1">Gambar 1</div>
-        <img id="sliderImage2" src="Gambar/Slide2.jpg" alt="Slider Image 2">
-        <div class="slidertitle" id="title2">Gambar 2</div>
-        <img id="sliderImage3" src="Gambar/Slide3.jpg" alt="Slider Image 3">
-        <div class="slidertitle" id="title3">Gambar 3</div>
+    <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="Gambar/S1.jpg" class="d-block  w-130"alt="...">
+            </div>
+        <div class="carousel-item">
+            <img src="Gambar/S2.jpg" class="d-block  w-130"alt="...">
+            </div>
+        <div class="carousel-item">
+            <img src="Gambar/S3.jpg" class="d-block  w-130"alt="...">
+           </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
      <section class="profile-section">
         <div class="profile-container">
             <h2 class="profile-title">Selamat Datang di UTS Hotel</h2>
@@ -62,5 +60,7 @@
             <p>&copy; 2341720208 - TI 2E / 18</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
