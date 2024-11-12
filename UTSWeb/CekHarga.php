@@ -10,18 +10,24 @@ $hargaTipeKamar = [
     "superior" => 400000,
     "deluxe" => 500000
 ];
+$lantaiError = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lantai = $_POST['lantai'];
     $type = $_POST['type'];
     $jumlahHari = $_POST['jumlahHari'];
     $diskon = $_POST['diskon'];
+    
+    if ($lantai < 1) {
+        $lantaiError = "Tolong pilih dimulai dari lantai 1";
+    }
+    
     if (empty($type)) {
         $typeError = "Tipe kamar harus dipilih";
     }
     if (empty($diskon)) {
         $diskonError = "Diskon harus dipilih";
     }
-    if (!empty($type) && isset($hargaTipeKamar[$type])) {
+    if (!empty($type) && isset($hargaTipeKamar[$type]) && $lantai >= 1) {
         $hargaSewa = $hargaTipeKamar[$type] * $jumlahHari;
         if ($lantai > 5) {
             $hargaSewa += 50000;
@@ -63,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="login-form">
         <h2>Cek Harga</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            <label for="lantai">Lantai:</label>
-            <input type="number" id="lantai" name="lantai" value="<?php echo $lantai; ?>" required>
+        <label for="lantai">Lantai:</label>
+        <input type="number" id="lantai" name="lantai" value="<?php echo $lantai; ?>" min="1" required>
             <label for="type">Type:</label>
             <select id="type" name="type">
                 <option value="">Pilih Tipe</option>
