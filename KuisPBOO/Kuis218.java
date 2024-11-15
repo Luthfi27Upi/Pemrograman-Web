@@ -54,6 +54,12 @@ public class Kuis218 extends javax.swing.JFrame {
 
         IPK.setText("IPK");
 
+        NIKBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NIKBoxActionPerformed(evt);
+            }
+        });
+
         AlamatBox.setColumns(20);
         AlamatBox.setRows(5);
         jScrollPane1.setViewportView(AlamatBox);
@@ -81,6 +87,12 @@ public class Kuis218 extends javax.swing.JFrame {
         });
 
         PendidikanBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SD", "SMP", "SMA", "D1", "D2", "D3", "D4 / S1", "S2", "S3" }));
+        PendidikanBox.setSelectedIndex(-1);
+        PendidikanBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PendidikanBoxActionPerformed(evt);
+            }
+        });
 
         IPKBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,19 +211,18 @@ public class Kuis218 extends javax.swing.JFrame {
     }                                       
 
     private void TanggalBoxActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         try {
-            LocalDate birthDate = LocalDate.parse(TanggalBox.getText(), formatter);
-            LocalDate currentDate = LocalDate.now();
-            long age = ChronoUnit.YEARS.between(birthDate, currentDate);
-
-            if (age < 18) {
-                JOptionPane.showMessageDialog(this, "Anda belum cukup umur untuk melamar pekerjaan ini");
-                TanggalBox.setText(""); // Clear invalid input
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Format tanggal salah! Gunakan format yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate birthDate = LocalDate.parse(TanggalBox.getText(), formatter);
+               
+        long age = ChronoUnit.YEARS.between(birthDate, LocalDate.now());               
+        if (age < 18) { 
+            JOptionPane.showMessageDialog(this, "Jika belum 18 tahun anda tidak bisa mendaftar");
+            TanggalBox.setText(""); 
         }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Tanggal tidak valid");
+    }
     }                                          
 
     private void IPKBoxActionPerformed(java.awt.event.ActionEvent evt) {                                       
@@ -238,6 +249,20 @@ public class Kuis218 extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Anda berhasil mendaftar");
         }
+    }                                      
+
+    private void PendidikanBoxActionPerformed(java.awt.event.ActionEvent evt) {                                              
+         String pendidikan = (String) PendidikanBox.getSelectedItem();
+    
+    // Peringatan jika pendidikan di bawah D1
+    if (pendidikan.equals("SD") || pendidikan.equals("SMP") || pendidikan.equals("SMA")) {
+        JOptionPane.showMessageDialog(this, "Minimal Pendidikan harus D1");
+        PendidikanBox.setSelectedIndex(3); // Set default ke "D1"
+    }
+    }                                             
+
+    private void NIKBoxActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
     }                                      
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
