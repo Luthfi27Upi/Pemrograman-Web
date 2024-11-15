@@ -248,6 +248,18 @@ public class Kuis218 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Semua data harus diisi!");
         } else {
             JOptionPane.showMessageDialog(this, "Anda berhasil mendaftar");
+             NIKBox.setText("");
+            NamaBox.setText("");
+            AlamatBox.setText("");
+            Laki.setSelected(false);
+            Perempuan.setSelected(false);
+            Badminton.setSelected(false);
+            Berenang.setSelected(false);
+            Basket.setSelected(false);
+            TelpBox.setText("");
+            TanggalBox.setText("");
+            PendidikanBox.setSelectedIndex(0);
+            IPKBox.setText("");
         }
     }                                      
 
