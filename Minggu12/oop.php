@@ -82,11 +82,9 @@ class Car {
     }
 
     public function __destruct() {
-        echo "The car is destroyed.<br>";
+        echo "The car is destroyed.<br> ";
     }
 }
-
 $car = new Car("Toyota");
-
-echo "Brand: " . $car->getBrand() . "<br>";
-
+echo "Brand: " . $car->getBrand() ."<br>";
+echo "";
