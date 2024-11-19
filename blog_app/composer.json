@@ -1,0 +1,15 @@
+{
+    "name": "upi-pc/blog_app",
+    "autoload": {
+        "psr-4": {
+            "UpiPc\\BlogApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luthfi27upi",
+            "email": "galut012@gmail.com"
+        }
+    ],
+    "require": {}
+}
