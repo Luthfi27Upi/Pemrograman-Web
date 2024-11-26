@@ -1,8 +1,8 @@
 <?php
-$host = "localhost"; // Nama host
-$username = "root"; // Nama user
-$password = ""; // Password, sesuaikan jika ada
-$dbname = "webjs10"; // Nama database
+$host = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "webjs10"; 
 
 $koneksi = mysqli_connect($host, $username, $password, $dbname);
 
