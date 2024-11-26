@@ -12,4 +12,3 @@ if ($koneksi) {
     echo "Koneksi Gagal.";
     die("Error: " . mysqli_connect_error());
 }
- 
