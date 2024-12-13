@@ -94,6 +94,8 @@ public class FormAnggota extends javax.swing.JFrame {
 
         jLabel3.setText("No Telepon");
 
+        txtIdAnggota.setEditable(false);
+
         jLabel4.setText("Alamat");
 
         txtAlamat.setColumns(20);
