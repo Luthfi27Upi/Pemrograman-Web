@@ -14,9 +14,9 @@ public class FormBuku extends javax.swing.JFrame {
      */
     public void kosongkanForm(){
         txtIdBuku.setText("0");
-        cmbKategori.setSelectedIndex(0);
+        cmbKategori.setSelectedIndex(0) ;
         txtJudul.setText("");
-        txtPenulis.setText("");
+        txtPenulis.setText("") ;
         txtPenerbit.setText("");     
     }
     public void tampilkanData() {

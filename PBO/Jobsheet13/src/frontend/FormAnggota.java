@@ -12,8 +12,8 @@ public class FormAnggota extends javax.swing.JFrame {
      * Creates new form FormAnggota
      */
     public void kosongkanForm() {
-        txtIdAnggota.setText("0");
-        txtNamaAnggota.setText("");
+        txtIdAnggota.setText("0") ;
+        txtNamaAnggota.setText("") ;
         txtAlamat.setText("");
         txtTelepon.setText("");
     }

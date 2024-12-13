@@ -14,7 +14,7 @@ import java.sql.*;
 public class Pegawai {
 
     private int idpegawai;
-    private String nama;
+    private String nama ;
     private String alamat;
     private String notelp;
     private String jabatan;

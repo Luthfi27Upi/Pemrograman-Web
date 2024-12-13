@@ -17,8 +17,8 @@ public class FormPegawai extends javax.swing.JFrame {
      */
     public FormPegawai() {
         initComponents();
-        tampilkanData();
-        kosongkanForm();
+        tampilkanData(); 
+        kosongkanForm() ;
     }
 
     public void kosongkanForm() {

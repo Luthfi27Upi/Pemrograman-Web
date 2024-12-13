@@ -14,7 +14,7 @@ public class FormPeminjaman extends javax.swing.JFrame {
      */
     public FormPeminjaman() {
         initComponents();
-        tampilkanData();
+        tampilkanData() ;
         kosongkanForm();
     }
 

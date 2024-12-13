@@ -13,7 +13,7 @@ public class Peminjaman {
     private String tanggalKembali;
 
     public Peminjaman() {
-        anggota = new Anggota();
+        anggota = new Anggota() ;
         buku = new Buku();
     }
 

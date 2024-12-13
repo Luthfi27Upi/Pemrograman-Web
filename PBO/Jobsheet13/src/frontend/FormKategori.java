@@ -13,9 +13,9 @@ public class FormKategori extends javax.swing.JFrame {
      * Creates new form FormKategori
      */
     public void kosongkanForm() {
-        txtIdKategori.setText("0");
+        txtIdKategori.setText("0") ;
         txtNama.setText("");
-        txtKeterangan.setText("");
+        txtKeterangan.setText("") ;
     }
     public void tampilkanData(){
         String[] kolom = {"ID" , "Nama" , "Keterangan"};

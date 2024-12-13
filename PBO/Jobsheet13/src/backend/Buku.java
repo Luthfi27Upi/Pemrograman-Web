@@ -7,7 +7,7 @@ public class Buku {
     private int idBuku;
     private Kategori kategori = new Kategori(); // Inisialisasi default
     private String judul;
-    private String penerbit;
+    private String penerbit ;
     private String penulis;
 
     // Konstruktor tanpa parameter
